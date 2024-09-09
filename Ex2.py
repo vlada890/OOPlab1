@@ -12,5 +12,10 @@ class Student(Animal):
         self.licenta=licenta
     def speak(self):
         print ("Salut!Invat la "+str(self.licenta))
-
+    def __del__(self):
+        print(str(self.name)+' a fost sters')
 #metoda str e mostenita de la superclasa Animal
+#exemplu:pers1=Student(21,'igor','programare') 
+#        print(persoana1) --> 'igor are 21 ani'
+#destructorul instantei clasei Student
+#exemplu: del pers1 --> 'igor a fost sters'
