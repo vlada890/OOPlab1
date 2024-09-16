@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class A {
+
+private:
+	int a;
+
+public:
+	A() { a = 2; } //constructor fara nici un parametru
+	friend class B;
+};
+
+class B {
+private:
+	int b;
+
+public:
+	void getA(A& x)
+	{
+		cout << "variabila privata :";
+		cout << x.a;
+	}
+};
+
+int main()
+{
+	A a;
+	B b;
+	b.getA(a);
+	return 0;
+}
