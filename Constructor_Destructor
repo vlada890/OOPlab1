@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Carte {        // The class
+  public:          // Access specifier
+    string autor;  // Attribute
+    string titlu;  // Attribute
+    int isbn;      // Attribute
+    Carte(string x, string y, int z) {  // Constructor with parameters
+      autor = x;
+      titlu = y;
+      isbn = z;}
+    ~Carte() {
+  
+        cout << "Instanta a fost distrusa "<< "\n";
+    }
+};
+
+int main() {
+  // Create objects and call the constructor with different values
+  Carte obj1("Ion", "La ciresi", 2109);
+  Carte obj2("Ana", "La caise", 2612);
+
+  // Print values
+  cout << obj1.titlu << " a fost scris de " << obj1.autor << " , " << obj1.isbn << "\n";
+  cout << obj2.titlu << " a fost scris de " << obj2.autor << " , " << obj2.isbn << "\n";
+  return 0;
+}
